@@ -1,0 +1,28 @@
+@mixin clear-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @mixin clear-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  @mixin wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  
+  @mixin font-size($size, $line, $font-weight: 400) {
+    font-size: $size;
+    line-height: $line;
+    font-weight: $font-weight;
+  }
+  
+  @mixin flex($justify-content: space-between, $align-items: center) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+  }
