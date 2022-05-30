@@ -13,7 +13,7 @@
     <div class="contacts header__contacts">
       <a class="contacts__address" target="_blank" href="https://goo.gl/maps/Ti2dxCqLNnLRVRwQ6"><address>ul. Obrońców Pokoju 7 <br> 86-100 Kolbuszowa</address></a>
       <a class="contacts__tel" href="tel:+48881500636">+48 881 500 636</a>
-      <button href="contact.html" class="contacts__write-us" type="button">Napisz do nas</button>
+      <button href="contact.html" class="contacts__write-us" type="button" id="contact">Napisz do nas</button>
     </div>
     <div class="header__wrapp">
       <img class="header__logo" width="150" src="img/logo.png" alt="Logo">
@@ -22,7 +22,7 @@
           <li class="navigation__item"> <a href="#offer">Oferta</a> </li>
           <li class="navigation__item"> <a href="#team">O nas</a> </li>
           <li class="navigation__item"> <a href="#about">Galeria</a> </li>
-          <li class="navigation__item"> <a href="#footer">Kontakt</a> </li>
+          <li class="navigation__item"> <a href="#footer" id="contact">Kontakt</a> </li>
         </ul>
       </nav>
     </div>
@@ -144,8 +144,42 @@
     <div class="about wrapper" id="about">
       <h2 class="about__header">O nas</h2>
       <div class="about__wrapper">
-        <div class="about__slider">
-          <img src="img/about.jpg" alt="Gabinet" class="about__img">
+
+        <div class="csslider infinity" id="slider1">
+          <input type="radio" name="slides" checked="checked" id="slides_1"/>
+          <input type="radio" name="slides" id="slides_2"/>
+          <input type="radio" name="slides" id="slides_3"/>
+          <input type="radio" name="slides" id="slides_4"/>
+          <input type="radio" name="slides" id="slides_5"/>
+          <input type="radio" name="slides" id="slides_6"/>
+          <ul>
+            <li><img src="img/slide1.jpg" alt="Gabinet" class="about__img"></li>
+            <li><img src="img/slide2.jpg" alt="Gabinet" class="about__img"></li>
+            <li><img src="img/slide3.jpg" alt="Gabinet" class="about__img"></li>
+            <li><img src="img/slide4.jpg" alt="Gabinet" class="about__img"></li>
+            <li><img src="img/slide5.jpg" alt="Gabinet" class="about__img"></li>
+            <li><img src="img/slide6.jpg" alt="Gabinet" class="about__img"></li>
+          </ul>
+          <div class="arrows">
+            <label for="slides_1"></label>
+            <label for="slides_2"></label>
+            <label for="slides_3"></label>
+            <label for="slides_4"></label>
+            <label for="slides_5"></label>
+            <label for="slides_6"></label>
+            <label class="goto-first" for="slides_1"></label>
+            <label class="goto-last" for="slides_6"></label>
+          </div>
+          <div class="navigation"> 
+            <div>
+              <label for="slides_1"></label>
+              <label for="slides_2"></label>
+              <label for="slides_3"></label>
+              <label for="slides_4"></label>
+              <label for="slides_5"></label>
+              <label for="slides_6"></label>
+            </div>
+          </div>
         </div>
         <p class="about__text">Gabinet Urban Stomatologia powstał 6 lat temu. Naszym priorytetem jest komfort i zdrowie pacjenta. Pragniemy, aby wizyty w naszym gabinecie były przyjemnością, dlatego zawsze bardzo się staramy, aby czas spędzony na dbaniu o piękny i zdrowy uśmiech minął w miłej atmosferze i bezboleśnie.
           Zajmujemy się leczeniem dzieci i dorosłych. Jako rodzice, wiemy jak szczególnie ważny jest odpowiedni kontakt z dziećmi, aby leczenie było dla nich bezstresowe i skuteczne.
@@ -293,30 +327,38 @@
     </div>
   </div>
 
-  <div class="contact popup">
+  <div class="contact popup popup--contact">
     <div class="popup__wrapper">
       <h3 class="contact__header">Kontakt</h3>
       <ul class="contact__list">
-        <li class="contact__item"><a class="contact__address" target="_blank" href="https://goo.gl/maps/Ti2dxCqLNnLRVRwQ6"><address>ul. Obrońców Pokoju 7 <br> 86-100 Kolbuszowa</address></a></li>
+        <li class="contact__item"><a class="contact__address-head" target="_blank" href="https://goo.gl/maps/Ti2dxCqLNnLRVRwQ6"><address>ul. Obrońców Pokoju 7 <br> 86-100 Kolbuszowa</address></a></li>
         <li class="contact__item"><a class="contact__tel" href="tel:+48881500636">+48 881 500 636</a></li>
-        <li class="contact__item">urban@urban.pl</li>
+        <li class="contact__item contact__item--email">urban@urban.pl</li>
       </ul>
-      <div class="contakt__inner-wrap">
-        <p class="contakt__adress">
+      <div class="contact__inner-wrap">
+        <p class="contact__adress">
           Gabinet usług stomatologicznych Urban <br>
+          <br>
           ul. Obrońców Pokoju 7 <br> 
           86-100 Kolbuszowa <br>
           tel: +48 881 500 636
         </p>
-        <form action="index.html">
+        <form action="index.html" class="contact__form">
           <h3 class="contact__form-header">Formularz kontaktowy</h3>
+
           <label for="name" class="visually-hidden">Imię i nazwisko</label>
-          <label for="name" class="visually-hidden">Telefon</label>
-          <label for="name" class="visually-hidden">Adres E-mail</label>
-          <input type="text" placeholder="Imię i nazwisko" id="name">
-          <input type="tel" placeholder="Telefon" id="tel">
-          <input type="email" placeholder="Adres e-mail" id="email">
-          <textarea name="text" id="text" cols="30" rows="10"></textarea>
+          <label for="tel" class="visually-hidden">Telefon</label>
+          <label for="email" class="visually-hidden">Adres E-mail</label>
+          <label for="text" class="visually-hidden">Treść wiadomości...</label>
+
+          <div class="contact__form-wrapper">
+            <input type="text" placeholder="Imię i nazwisko" name="name" id="name">
+            <input type="tel" placeholder="Telefon" name="tel" id="tel">
+            <input type="email" placeholder="Adres e-mail" name="email" id="email">
+          </div>
+
+          <textarea name="text" id="text" cols="30" rows="10" placeholder="Treść wiadomości.."></textarea>
+          <button class="contact__submit" type="submit">Wyślij wiadomość</button>
         </form>
       </div>
     </div>

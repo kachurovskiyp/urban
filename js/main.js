@@ -23,7 +23,7 @@ function init () {
         menuBtn.classList.toggle('header__menu-btn--opened');
     });
 
-    // popup init 
+    // popups init 
 
     const popupButtons = document.querySelectorAll('.offer__button');
     const popups = document.querySelectorAll('.popup');
@@ -37,52 +37,95 @@ function init () {
     const popupSurgery = document.querySelector('.popup--surgery');
     const popupOrthodontics = document.querySelector('.popup--orthodontics');
 
-    popupCloseBtn.addEventListener('click', (evt) => {
+    const closePopupByClick = function (evt) {
+        closePopups(evt);
+    };
+
+    const closePopups = function (evt) {
+        evt.preventDefault();
         popups.forEach((popup) => {
             if(popup.classList.contains('popup--opened')) {
                 popup.classList.remove('popup--opened');
             }
         });
         popupCloseBtn.classList.remove('close-popup--opened');
-    });
+        popupCloseBtn.removeEventListener('click', closePopups);
+    }
+
+    const openPopup = function (popup) {
+        switch(popup) {
+            case 'children':
+                popupChildren.classList.add('popup--opened');
+                break;
+
+            case 'aesthetic':
+                popupAesthetic.classList.add('popup--opened');
+                break;
+
+            case 'prosthetics':
+                popupProsthetics.classList.add('popup--opened');
+                break;
+
+            case 'prevention':
+                popupPrevention.classList.add('popup--opened');
+                break;
+
+            case 'endodontics':
+                popupEndodontics.classList.add('popup--opened');
+                break;
+
+            case 'surgery':
+                popupSurgery.classList.add('popup--opened');
+                break;
+
+            case 'orthodontics':
+                popupOrthodontics.classList.add('popup--opened');
+                break;
+        }
+        popupCloseBtn.addEventListener('click', closePopups);
+        popupCloseBtn.classList.add('close-popup--opened');
+    }
 
     popupButtons.forEach((btn) => {
         btn.addEventListener('click', (evt) => {
             evt.preventDefault();
-            let target = evt.target.id;
+            let target;
 
-            switch(target) {
-                case 'children':
-                    popupChildren.classList.add('popup--opened');
-                    break;
-
-                case 'aesthetic':
-                    popupAesthetic.classList.add('popup--opened');
-                    break;
-
-                case 'prosthetics':
-                    popupProsthetics.classList.add('popup--opened');
-                    break;
-
-                case 'prevention':
-                    popupPrevention.classList.add('popup--opened');
-                    break;
-
-                case 'endodontics':
-                    popupEndodontics.classList.add('popup--opened');
-                    break;
-
-                case 'surgery':
-                    popupSurgery.classList.add('popup--opened');
-                    break;
-
-                case 'orthodontics':
-                    popupOrthodontics.classList.add('popup--opened');
-                    break;
+            if(evt.target.tagName === 'BUTTON') {
+                target = evt.target.id;
+            } else {
+                target = evt.target.closest('button').id;
             }
-            popupCloseBtn.classList.add('close-popup--opened');
+
+            openPopup(target);
         });
     });
+
+
+
+    document.addEventListener('click', (evt) => {
+        // if(evt.target.classList.contains('popup--opened')) {
+        //     closePopups();
+        // }
+        if (evt.target.classList.contains('popup--opened'))
+            closePopupByClick(evt);
+    });
+
+    // contact popup init 
+
+    const popupContact = document.querySelector('.popup--contact');
+    const contactBtns = document.querySelectorAll('.contacts__write-us');
+
+    if(popupContact) {
+        contactBtns.forEach((btn) => {
+            btn.addEventListener('click', (evt) => {
+                evt.preventDefault();
+                popupContact.classList.add('popup--opened');
+                popupCloseBtn.classList.add('close-popup--opened');
+            });
+        });        
+    }
+    
 };
 
 init();
