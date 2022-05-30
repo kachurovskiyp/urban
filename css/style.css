@@ -848,7 +848,6 @@ a.nice-link:hover:after {
   flex-grow: 1;
   padding-left: 25px;
   background: url(../img/pin.svg) no-repeat 0 center;
-  background-size: 2%;
 }
 .contacts__address:hover {
   color: #b7b7b7;
@@ -876,11 +875,6 @@ a.nice-link:hover:after {
   transform: scale(110%);
 }
 
-@media (max-width: 1023px) {
-  .contacts__address {
-    background-size: 3%;
-  }
-}
 @media (max-width: 767px) {
   .contacts {
     display: none;
