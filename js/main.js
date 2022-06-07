@@ -121,6 +121,7 @@ function init () {
         evt.preventDefault();
         popupContact.classList.add('popup--opened');
         popupCloseBtn.classList.add('close-popup--opened');
+        popupCloseBtn.addEventListener('click', closePopups);
     }
     
 
