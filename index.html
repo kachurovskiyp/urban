@@ -22,7 +22,7 @@
           <li class="navigation__item"> <a href="#offer">Oferta</a> </li>
           <li class="navigation__item"> <a href="#team">O nas</a> </li>
           <li class="navigation__item"> <a href="#about">Galeria</a> </li>
-          <li class="navigation__item"> <a href="#footer" id="contact">Kontakt</a> </li>
+          <li class="navigation__item"> <a href="#footer" class="navigation__contact">Kontakt</a> </li>
         </ul>
       </nav>
     </div>
@@ -83,6 +83,12 @@
               <h3 class="offer__title">Ortodoncja</h3>
             </button>
           </li>
+          <li class="offer__item">
+            <button class="offer__button" type="button" id="MedAesthetic">
+              <img src="img/icons8.png" height="50" alt="ząb">
+              <h3 class="offer__title">Medycyna Estetyczna</h3>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
@@ -103,7 +109,7 @@
           <div class="team__desc">
             <h3 class="team__name">Aleksandra Urban</h3>
             <p class="team_name-desc">lekarz dentysta</p>
-            <p class="team__text">Absolwentka wydziału lekarsko-dentystycznego Uniwersytetu Medycznego w Lublinie. Lekarz z wieloletnim doświadczeniem w leczeniu dzieci i dorosłych. Specjalizuje się  w stomatologii estetycznej, endodoncji i protetyce. Prywatnie dumna mama Amelki i Kuby, miłośniczka kryminałów i górskich wędrówek.</p>
+            <p class="team__text">Absolwentka wydziału lekarsko-dentystycznego Uniwersytetu Medycznego w Lublinie. Lekarz z wieloletnim doświadczeniem w leczeniu dzieci i dorosłych. Specjalizuje się  w stomatologii estetycznej, endodoncji i protetyce. Prywatnie dumna mama Amelki i Kuby.</p>
           </div>
         </li>
         <li class="team__item">
@@ -111,7 +117,7 @@
           <div class="team__desc">
             <h3 class="team__name">Ewelina Wilk</h3>
             <p class="team_name-desc">asystentka stomatologiczna </p>
-            <p class="team__text">Sprawnie asystuje przy zabiegach i dba o porządek w gabinecie. Obsługuje również recepcję. Jest miła i uśmiechnięta.</p>
+            <p class="team__text">Sprawnie asystuje przy zabiegach i dba o porządek w gabinecie. Obsługuje również recepcję. Zawsze miła i uśmiechnięta.</p>
           </div>
         </li>
         <li class="team__item">
@@ -119,7 +125,7 @@
           <div class="team__desc">
             <h3 class="team__name">Dominik Kluz</h3>
             <p class="team_name-desc">lekarz dentysta</p>
-            <p class="team__text">Absolwent Warszawskiego Uniwersytetu Medycznego . Zajmuje się chirurgią dzieci i dorosłych, w tym usuwaniem ósemek, zębów zatrzymanych i podcinaniem wędzidełek. Zawsze spokojny i opanowany.</p>
+            <p class="team__text">Absolwent Warszawskiego Uniwersytetu Medycznego . Zajmuje się chirurgią dzieci i dorosłych, w tym usuwaniem ósemek, zębów zatrzymanych i podcinaniem wędzidełek. Jest też naszym ekspertem od medycyny estetycznej.</p>
           </div>
         </li>
         <li class="team__item">
@@ -135,7 +141,7 @@
           <div class="team__desc">
             <h3 class="team__name">Monka Ruchała</h3>
             <p class="team_name-desc">lekarz stomatolog</p>
-            <p class="team__text">Absolwentka Akademii Medycznej w Lublinie. Zajmuje się leczeniem ortodontycznym dzieci i dorosłych. Doświadczona i wykwalifikowana.</p>
+            <p class="team__text">Absolwentka Akademii Medycznej w Lublinie. Zajmuje się leczeniem ortodontycznym dzieci i dorosłych. Jest osobą doświadczoną i wykwalifikowaną.</p>
           </div>
         </li>
       </ul>
@@ -143,8 +149,11 @@
 
     <div class="about wrapper" id="about">
       <h2 class="about__header">O nas</h2>
+      <p class="about__text">Gabinet Urban Stomatologia powstał 6 lat temu. Naszym priorytetem jest komfort i zdrowie pacjenta. Pragniemy, aby wizyty w naszym gabinecie były przyjemnością, dlatego zawsze bardzo się staramy, aby czas spędzony na dbaniu o piękny i zdrowy uśmiech minął w miłej atmosferze i bezboleśnie.
+        Zajmujemy się leczeniem dzieci i dorosłych. Jako rodzice, wiemy jak szczególnie ważny jest odpowiedni kontakt z dziećmi, aby leczenie było dla nich bezstresowe i skuteczne.
+        Rozwijamy się dla Was. Od niedawna pracujemy w nowym budynku Kliniki Zdrowia, gdzie dysponujemy nowoczesnym wyposażeniem i wygodnym wnętrzem. Powiększamy również zespół, aby móc oferować Państwu jak najszersze możliwości leczenia i jak najkrótszy czas oczekiwania na wizytę. Oprócz tego stale podnosimy swoje kwalifikacje uczestnicząc w szkoleniach i kursach medycznych.
+      </p>
       <div class="about__wrapper">
-
         <div class="csslider infinity" id="slider1">
           <input type="radio" name="slides" checked="checked" id="slides_1"/>
           <input type="radio" name="slides" id="slides_2"/>
@@ -152,6 +161,7 @@
           <input type="radio" name="slides" id="slides_4"/>
           <input type="radio" name="slides" id="slides_5"/>
           <input type="radio" name="slides" id="slides_6"/>
+          <input type="radio" name="slides" id="slides_7"/>
           <ul>
             <li><img src="img/slide1.jpg" alt="Gabinet" class="about__img"></li>
             <li><img src="img/slide2.jpg" alt="Gabinet" class="about__img"></li>
@@ -159,6 +169,7 @@
             <li><img src="img/slide4.jpg" alt="Gabinet" class="about__img"></li>
             <li><img src="img/slide5.jpg" alt="Gabinet" class="about__img"></li>
             <li><img src="img/slide6.jpg" alt="Gabinet" class="about__img"></li>
+            <li><img src="img/slide7.jpg" alt="Gabinet" class="about__img"></li>
           </ul>
           <div class="arrows">
             <label for="slides_1"></label>
@@ -167,6 +178,7 @@
             <label for="slides_4"></label>
             <label for="slides_5"></label>
             <label for="slides_6"></label>
+            <label for="slides_7"></label>
             <label class="goto-first" for="slides_1"></label>
             <label class="goto-last" for="slides_6"></label>
           </div>
@@ -178,13 +190,10 @@
               <label for="slides_4"></label>
               <label for="slides_5"></label>
               <label for="slides_6"></label>
+              <label for="slides_7"></label>
             </div>
           </div>
         </div>
-        <p class="about__text">Gabinet Urban Stomatologia powstał 6 lat temu. Naszym priorytetem jest komfort i zdrowie pacjenta. Pragniemy, aby wizyty w naszym gabinecie były przyjemnością, dlatego zawsze bardzo się staramy, aby czas spędzony na dbaniu o piękny i zdrowy uśmiech minął w miłej atmosferze i bezboleśnie.
-          Zajmujemy się leczeniem dzieci i dorosłych. Jako rodzice, wiemy jak szczególnie ważny jest odpowiedni kontakt z dziećmi, aby leczenie było dla nich bezstresowe i skuteczne.
-          Rozwijamy się dla Was. Od niedawna pracujemy w nowym budynku Kliniki Zdrowia, gdzie dysponujemy nowoczesnym wyposażeniem i wygodnym wnętrzem. Powiększamy również zespół, aby móc oferować Państwu jak najszersze możliwości leczenia i jak najkrótszy czas oczekiwania na wizytę. Oprócz tego stale podnosimy swoje kwalifikacje uczestnicząc w szkoleniach i kursach medycznych.
-        </p>
       </div>
     </div>
   </main>
@@ -327,13 +336,25 @@
     </div>
   </div>
 
+  <div class="popup popup--MedAesthetic">
+    <div class="popup__wrapper">
+      <h3 class="popup__header">Medycyna Estetyczna</h3>
+      <div class="popup__inner-wrapper">
+        <img src="img/offer-popup-aesthtetic.jpg" alt="" class="popup__image">
+        <p class="popup__desc">
+          Medycyna Estetyczna zajmuje się w głównej mierze profilaktyką starzenia się skóry i odwracaniem tego procesu. Ponieważ piękny uśmiech wymaga odpowiedniej oprawy, zapewniamy możliwość skorzystania z terapii toksyną botulinową, osoczem bogatopłytkowym, fibryną bogatopłytkową, biostymulatorami oraz mezoterapii.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <div class="contact popup popup--contact">
     <div class="popup__wrapper">
       <h3 class="contact__header">Kontakt</h3>
       <ul class="contact__list">
         <li class="contact__item"><a class="contact__address-head" target="_blank" href="https://goo.gl/maps/Ti2dxCqLNnLRVRwQ6"><address>ul. Obrońców Pokoju 7 <br> 86-100 Kolbuszowa</address></a></li>
         <li class="contact__item"><a class="contact__tel" href="tel:+48881500636">+48 881 500 636</a></li>
-        <li class="contact__item contact__item--email">urban@urban.pl</li>
+        <li class="contact__item contact__item--email">urban@urbanurban.pl</li>
       </ul>
       <div class="contact__inner-wrap">
         <p class="contact__adress">
@@ -342,6 +363,8 @@
           ul. Obrońców Pokoju 7 <br> 
           86-100 Kolbuszowa <br>
           tel: +48 881 500 636
+          <br><br>
+          <img src="img/contact.jpg" width="300" alt="budynek gabinetu">
         </p>
         <form action="index.html" class="contact__form">
           <h3 class="contact__form-header">Formularz kontaktowy</h3>

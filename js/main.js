@@ -36,6 +36,7 @@ function init () {
     const popupEndodontics = document.querySelector('.popup--endodontics');
     const popupSurgery = document.querySelector('.popup--surgery');
     const popupOrthodontics = document.querySelector('.popup--orthodontics');
+    const popupMedAesthetic = document.querySelector('.popup--MedAesthetic');
 
     const closePopupByClick = function (evt) {
         closePopups(evt);
@@ -81,6 +82,10 @@ function init () {
             case 'orthodontics':
                 popupOrthodontics.classList.add('popup--opened');
                 break;
+
+            case 'MedAesthetic':
+                popupMedAesthetic.classList.add('popup--opened');
+                break;
         }
         popupCloseBtn.addEventListener('click', closePopups);
         popupCloseBtn.classList.add('close-popup--opened');
@@ -101,12 +106,7 @@ function init () {
         });
     });
 
-
-
     document.addEventListener('click', (evt) => {
-        // if(evt.target.classList.contains('popup--opened')) {
-        //     closePopups();
-        // }
         if (evt.target.classList.contains('popup--opened'))
             closePopupByClick(evt);
     });
@@ -115,15 +115,25 @@ function init () {
 
     const popupContact = document.querySelector('.popup--contact');
     const contactBtns = document.querySelectorAll('.contacts__write-us');
+    const contactLink = document.querySelector('.navigation__contact');
+
+    function openContacts (evt) {
+        evt.preventDefault();
+        popupContact.classList.add('popup--opened');
+        popupCloseBtn.classList.add('close-popup--opened');
+    }
+    
 
     if(popupContact) {
         contactBtns.forEach((btn) => {
             btn.addEventListener('click', (evt) => {
-                evt.preventDefault();
-                popupContact.classList.add('popup--opened');
-                popupCloseBtn.classList.add('close-popup--opened');
+                openContacts(evt);
             });
-        });        
+        });
+        
+        contactLink.addEventListener('click', (evt) => {
+            openContacts(evt);
+        });
     }
     
 };

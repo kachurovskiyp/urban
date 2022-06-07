@@ -280,6 +280,10 @@ body {
   width: 90%;
 }
 
+address {
+  font-style: normal;
+}
+
 .csslider {
   -moz-perspective: 1300px;
   -ms-perspective: 1300px;
@@ -1128,33 +1132,20 @@ a.nice-link:hover:after {
   text-align: center;
 }
 
-.about__wrapper {
-  display: flex;
-}
-
 .about__img {
   width: 100%;
 }
 
 .about__text {
-  width: 650%;
-  margin-top: 20px;
-  margin-left: 10px;
+  width: 80%;
+  margin: 20px auto;
+  text-align: justify;
 }
 
 @media (max-width: 1023px) {
-  .about__wrapper {
-    display: block;
-  }
-
-  .about__img {
-    width: 100%;
-  }
-
   .about__text {
     width: 90%;
     margin: 10px 0 0 40px;
-    text-align: justify;
   }
 }
 .footer {
